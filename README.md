@@ -9,7 +9,16 @@ Este guia aborda a solução para o problema de reconhecimento do token SafeSign
 O problema ocorre porque o token não é reconhecido no navegador Firefox. Para resolver isso, é necessário adicionar o pacote `/usr/lib/libaetpkss.so` no Firefox. No entanto, no Ubuntu 22.04, o Firefox é instalado por padrão via Snap, o que impede a configuração correta do token.
 
 ## Solução
+
+> Caso esteja usando uma rede interna, atente-se ao proxy. Configure as variáveis de ambiente do proxy antes de adicionar o repositório e instalar o Firefox. No terminal, execute os seguintes comandos, substituindo `proxy.example.com:8080` pelo endereço do seu proxy:
+
+```bash
+export http_proxy="http://usuario:senha@endereço:porta"
+export https_proxy="http://admin:admin@proxy.example.com:8080"
+´´´
 Para resolver o problema, é preciso desinstalar o Firefox do Snap e instalá-lo a partir do repositório oficial do Firefox. Siga os passos abaixo:
+```
+
 ```bash
 #Remove a instalacao anterior do Firefox via snap
 sudo snap remove --purge firefox
