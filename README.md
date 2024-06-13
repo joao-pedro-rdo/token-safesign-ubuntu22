@@ -15,9 +15,10 @@ O problema ocorre porque o token não é reconhecido no navegador Firefox. Para 
 ```bash
 export http_proxy="http://usuario:senha@endereço:porta"
 export https_proxy="http://admin:admin@proxy.example.com:8080"
-´´´
-Para resolver o problema, é preciso desinstalar o Firefox do Snap e instalá-lo a partir do repositório oficial do Firefox. Siga os passos abaixo:
 ```
+
+Para resolver o problema, é preciso desinstalar o Firefox do Snap e instalá-lo a partir do repositório oficial do Firefox. Siga os passos abaixo:
+
 
 ```bash
 #Remove a instalacao anterior do Firefox via snap
