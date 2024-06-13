@@ -1,4 +1,4 @@
-# Como resolver problema do token SafeSign no Firefox do Ubuntu 22.04
+# Resolvendo Problemas do Token SafeSign no Firefox no Ubuntu 22.04
 
 ## Introdução
 
