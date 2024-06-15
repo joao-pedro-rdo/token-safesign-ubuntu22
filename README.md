@@ -1,14 +1,15 @@
-# Resolvendo Problemas do Token SafeSign no Firefox no Ubuntu 22.04
+# Resolvendo Problemas do Token SafeSign no Firefox no Ubuntu 22.04 e 24.04
 
 ## Introdução
 
-Este guia aborda a solução para o problema de reconhecimento do token SafeSign no navegador Firefox no Ubuntu 22.04. Partimos do pressuposto de que o token já está instalado no Ubuntu 22.04. 
+Este guia aborda a solução para o problema de reconhecimento do token SafeSign no navegador Firefox no Ubuntu 22.04. Partimos do pressuposto de que o token já está instalado no Ubuntu 22.04 e 24.04
 
 ## Problema
 
 O problema ocorre porque o token não é reconhecido no navegador Firefox. Para resolver isso, é necessário adicionar o pacote `/usr/lib/libaetpkss.so` no Firefox. No entanto, no Ubuntu 22.04, o Firefox é instalado por padrão via Snap, o que impede a configuração correta do token.
 
 ## Solução
+### Método 1: Fazer os comandos manualmente 
 
 > Caso esteja usando uma rede interna, atente-se ao proxy. Configure as variáveis de ambiente do proxy antes de adicionar o repositório e instalar o Firefox. No terminal, execute os seguintes comandos, substituindo `proxy.example.com:8080` pelo endereço do seu proxy:
 
@@ -49,7 +50,19 @@ echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codenam
 Atualiza repositorios e instala o Firefox
 sudo apt update && sudo apt install firefox -y
 ```
+### Método 2: Utilizar Script Automatizado
 
+Para facilitar o processo, você pode utilizar o script `firefoxppa-install.sh`, que automatiza todos os passos necessários. Siga os passos abaixo para usar o script:
+
+1. Baixe o script `firefoxppa-install.sh` para o seu diretório de preferência.
+2. Torne o script executável:
+    ```bash
+    chmod +x firefoxppa-install.sh
+    ```
+3. Execute o script:
+    ```bash
+    sudo ./firefoxppa-install.sh
+    ```
 
 ### Passo 3: Configurar o Token no Firefox
 
