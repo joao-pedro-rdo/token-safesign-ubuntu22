@@ -61,7 +61,7 @@ Para facilitar o processo, você pode utilizar o script `firefoxppa-install.sh`,
     ```
 3. Execute o script:
     ```bash
-    sudo ./firefoxppa-install.sh
+    sudo bash firefoxppa-install.sh
     ```
 
 ### Passo 3: Configurar o Token no Firefox
